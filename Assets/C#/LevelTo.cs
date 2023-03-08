@@ -23,13 +23,6 @@ public class LevelTo : MonoBehaviour
 
     public void OnStartButton()
     {
-        if (ConfigManager.appConfig.GetString("httpAdres") == "")
-        {
-            SceneManager.LoadScene(PlaySceneNumber);
-        }
-        else
-        {
-            infra.OpenURL(ConfigManager.appConfig.GetString("httpAdres"));
-        }
+        SceneManager.LoadScene(PlaySceneNumber);
     }
 }
